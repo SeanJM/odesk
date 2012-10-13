@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/post-a-job.js"></script>
+    <script type="text/javascript" src="js/skills.js"></script>
+    <script type="text/javascript" src="js/skills-box.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>
+      Post a Job
+    </title>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-top-line">
+        <div class="main-container"> <!-- 960px Width -->
+          <nav id="main-navigation">
+            <a class="logo" href="#">oDesk Logo</a>
+            <a id="alerts" class="icon" href="#">Alerts</a>
+            <a id="inbox" class="icon" href="#">Alerts</a>
+            <a id="main-help" class="icon" href="#">Alerts</a>
+          </nav>
+          <div id="facebox">
+            <img class="profile-pic" src="http://www.lorempixel.com/27/27">
+            <div class="dropdown-container">
+              <a class="name" href="/profile">Sean MacIsaac</a>
+              <div class="dropdown-arrow"></div>
+              <div class="dropdown">
+                <div class="arrow ui-element"></div>
+                <a href="#"><span class="label">Provider</span> <span class="account">(Sean J MacIsaac)</span></a>
+                <a href="#"><span class="label">Contractor</span> <span class="account">(Sean MacIsaac)</span></a>
+                <hr/>
+                <a href="#"><span class="icon settings"></span>Settings</a>
+                <a href="#"><span class="icon logout"></span>Log out</a>
+              </div>
+            </div>
+          </div>
+          <nav id="tab-menu">
+            <a class="selected" href="#">Recruit</a>
+            <a href="#">My Team</a>
+            <a href="#">Biling</a>
+          </nav>
+        </div>
+      </div>
+      <div id="header-bottom-line">
+        <div class="main-container">
+          <nav id="tab-sub-menu">
+            <a href="#">Job Postings</a>
+            <a class="selected" href="#">Post a Job</a>
+            <a href="#">Find Contractors</a>
+            <a href="#">Saved Contractors</a>
+          </nav>
+          <div id="header-search">
+            <div class="icon search"></div>
+            <input type="text" placeholder="Search...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div class="main-container"> <!-- 960px Width -->
+        <h1>Post a Job</h1>
+        <input id="job-title" class="main-attribute" type="text" placeholder="Job Title">
+        <label for="job-description">
+          <span class="required">*</span> Description
+          <span id="job-description-help" class="help-container">
+            <span class="icon help"></span>
+            <span class="help-menu">
+              <span class="arrow ui-element"></span>
+              <span class="help-text">
+                <span class="title">Description</span>
+                <span class="text">Tell us all about the job that you are posting, what kind of work it is, what your expectations are and what you hope to get out of the experience.</span>
+              </span>
+            </span>
+          </span>
+        </label> <!-- Job Description -->
+        <textarea id="job-description"></textarea>
+        <div class="row">
+          <label for="category">
+            <span class="required">*</span> Category
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Category</span>
+                  <span class="text">
+                    Categories are split into major sections, click on a category to learn more about it.
+                    <span class="list">
+                      <span class="item">Web Development<span class="ui-element disclosure"></span></span>
+                      <span class="item">Software Development<span class="ui-element disclosure"></span></span>
+                      <span class="item">Networking &amp; Information Systems<span class="ui-element disclosure"></span></span>
+                      <span class="item">Writing &amp; Translation<span class="ui-element disclosure"></span></span>
+                      <span class="item">Administrative Support<span class="ui-element disclosure"></span></span>
+                      <span class="item">Design &amp; Multimedia<span class="ui-element disclosure"></span></span>
+                      <span class="item">Customer Service<span class="ui-element disclosure"></span></span>
+                      <span class="item">Sales &amp; Marketing<span class="ui-element disclosure"></span></span>
+                      <span class="item">Business Service<span class="ui-element disclosure"></span></span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <select>
+            <option>Category</option>
+            <option>Web Development</option>
+            <option>Software Development</option>
+            <option>Networking &amp; Information Systems</option>
+            <option>Writing &amp; Translation</option>
+            <option>Administrative Support</option>
+            <option>Design &amp; Multimedia</option>
+            <option>Customer Service</option>
+            <option>Sales &amp; Marketing</option>
+            <option>Business Services</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="subcategory">
+            <span class="required">*</span> Subcategory
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Subcategory</span>
+                  <span class="text">Based on your selection of the {{Category}} category, these are the available sub categories. Click on the listed sub categories to find out more information.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <select>
+            <option>Select Subcategory</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="subcategory">
+            <span class="not-required">*</span> Skills Required
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Skills Required</span>
+                  <span class="text">Adding skills to your job makes it easier for contractors to find your job and ensures contractors with the right skills apply.</span>
+                  <span class="text"><strong>Examples:</strong></span> 
+                  <span class="text">For Web Development, you may want a contractor who knows and understands PHP &amp; CSS, by typing PHP or CSS in the skills box you can add those skills to your job.</span>
+                  <span class="more"><span class="expand ui-element"></span>More</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <div id="skills-section">
+            <div id="skills-box"><input type="text"></div>
+            <div class="recommended-skills">
+              <p class="tip">Add our recommended skills to perform this job:</p>
+              <div class="selection">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            <!-- Skills Search -->
+            <div id="skills-search">
+              <ul class="list">
+                
+              </ul>
+              <div class="scrollbar-container">
+                <div class="scrollbar"></div>
+              </div>
+            </div>
+            <!-- End Skills Search -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
