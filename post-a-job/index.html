@@ -143,7 +143,7 @@
                 <span class="help-text">
                   <span class="title">Skills Required</span>
                   <span class="text">Adding skills to your job makes it easier for contractors to find your job and ensures contractors with the right skills apply.</span>
-                  <span class="text"><strong>Examples:</strong></span> 
+                  <span class="subtitle">Examples:</span> 
                   <span class="text">For Web Development, you may want a contractor who knows and understands PHP &amp; CSS, by typing PHP or CSS in the skills box you can add those skills to your job.</span>
                   <span class="more"><span class="expand ui-element"></span>More</span>
                 </span>
@@ -168,6 +168,155 @@
               </div>
             </div>
             <!-- End Skills Search -->
+          </div>
+        </div>
+        <div class="row">
+          <label for="job-type">
+            <span class="not-required">*</span> Job Type
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Job Type</span>
+                  <span class="text">Selecting a job type changes how you are billed.</span>
+                  <span class="subtitle">Hourly Billing:</span> 
+                  <span class="text">You will pay the contractor by the hour.</span>
+                  <span class="subtitle">Fixed Price:</span> 
+                  <span class="text">You provide detailed specification and contactors will bid on your job. A contractor can set an upfront-payment before starting.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="radio" name="job-type" value="hourly">
+              <span class="label">Hourly</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>Pay by the hour. Verify with the Work Diary</p>
+            </div>
+          </div>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="radio" name="job-type" value="fixed-rate">
+              <span class="label">Fixed Rate</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>Pay by the project. Requires detailed specifications.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <label for="subcategory">
+            <span class="required">*</span> Est. Duration
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Estimated Duration</span>
+                  <span class="text">This gives a contractor an idea of how long the job will last.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <select>
+            <option>Select Duration</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="subcategory">
+            <span class="required">*</span> Est. Workload
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Estimated Workload</span>
+                  <span class="text">This gives a contractor an idea of how long the job will last.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <select>
+            <option>Select Workload</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="contractor-type">
+            <span class="not-required">*</span> Contractor Type
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Estimated Workload</span>
+                  <span class="text">This gives a contractor an idea of how long the job will last.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="checkbox" name="independent-contractor" value="independent"><span class="label">Independent</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>Work with your contractor directly.</p>
+            </div>
+          </div>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="checkbox" name="agency-contractor" value="agency"><span class="label">Agency</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>Work through an agency that manages contractors and jobs. </p>
+            </div>
+          </div>
+        </div> <!-- Contractor Type -->
+        <div class="row">
+          <label for="job-visibility">
+            <span class="required">*</span> Job Visibility
+              <span id="job-description-help" class="help-container">
+              <span class="icon help"></span>
+              <span class="help-menu">
+                <span class="arrow ui-element"></span>
+                <span class="help-text">
+                  <span class="title">Job Visibility</span>
+                  <span class="subtitle"><strong>Public</strong></span>
+                  <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                  <span class="subtitle"><strong>Private</strong></span>
+                  <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                </span>
+              </span>
+            </span>
+          </label>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="radio" name="job-visibility" value="public">
+              <span class="label">Public</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>All contractors will be able to see your job and apply to it.</p>
+              <div class="checkbox-container">
+                <input type="checkbox" name="search-engine" value="search-engines"><span class="label">Visible to Search Engines</span>
+              </div>
+            </div>
+          </div>
+          <div class="option">
+            <div class="checkbox-container">
+              <input type="radio" name="job-visibility" value="public">
+              <span class="label">Private</span>
+            </div>
+            <div class="tip">
+              <div class="ui-element disclosure"></div>
+              <p>Only contractors you invite will be able to view and apply to your job.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -324,6 +324,7 @@ strong { font-weight: 600; }
     border       : 1px solid #cbcbcb;
     border-radius: 3px;
     background   : #fff;
+    float: left;
   }
     #main label .help-container .help-menu .help-text .title {
       display      : block;
@@ -331,9 +332,19 @@ strong { font-weight: 600; }
       font-weight  : 600;
       line-height  : 51px;
     }
+    #main label .help-container .help-menu .help-text .subtitle {
+      float      : left;
+      width      : 100%;
+      margin     : 10px 0 -8px;
+      font-size  : 15px;
+      font-weight: 600;
+      line-height: 26px;
+    }
     #main label .help-container .help-menu .help-text .text {
       display    : block;
-      margin     : 12px 0 10px 0;
+      float      : left;
+      width      : 100%;
+      margin     : 12px 0 12px;
       font-size  : 14px;
       line-height: 19px;
       color      : #656565;
@@ -402,6 +413,59 @@ strong { font-weight: 600; }
     #main .row select option {
       font-size: 15px;
     }
+    #main .row .option {
+      float: right;
+      width: 453px;
+      margin: 0 0 20px 0;
+    }
+    #main .row .option.last {
+      margin: 0;
+    }
+      #main .row .option .checkbox-container {
+        float   : left;
+        position: relative;
+        width   : 165px;
+      }
+        #main .row .option .checkbox-container input[type="radio"],
+        #main .row .option .checkbox-container input[type="checkbox"]{
+          position   : relative;
+          margin     : 0 12px 0 0;
+          line-height: 40px;
+        }
+        #main .row .option .checkbox-container .label{
+          font-size  : 17px;
+          font-weight: bold;
+          line-height: 40px;
+          color      : #656565;
+        }
+        #main .row .option .tip{
+          width   : 288px;
+          float: right;
+        }
+          
+          #main .row .option .tip .disclosure{
+            float   : left;
+            position: relative;
+            top     : 15px;
+          }
+
+          #main .row .option .tip p{
+            float    : right;
+            width    : 255px;
+            margin   : 8px 0 0 0;
+            font-size: 17px;
+            color    : #656565;
+          }
+
+          #main .row .option .tip .checkbox-container {
+            width: 255px;
+            float: right;
+            margin: 12px 0 0 0;
+          }
+            #main .row .option .tip .checkbox-container .label {
+              line-height: 20px;
+              font-size: 15px;
+            }
 /* Skills Section */
 #skills-section { 
   float   : right;
@@ -449,6 +513,16 @@ strong { font-weight: 600; }
       border : 2px solid #E7E7E7;
     }
     /* Skill Button */
+    
+    @-webkit-keyframes skill-appear { 
+      0% { 
+        background: #61B3FA; 
+      } 
+      100% { 
+        background: #D3E8FA; 
+      } 
+    }
+      
       #skills-section #skills-box .skill,
       #skills-section .recommended-skills .selection .skill {
         float        : left;
@@ -461,6 +535,7 @@ strong { font-weight: 600; }
         color        : #4578C8;
         background   : #D3E8FA;
         cursor       : pointer;
+        -webkit-animation: skill-appear 0.6s;
       }
       #skills-section .recommended-skills .selection .skill:hover{
         background: #BCDDFA;

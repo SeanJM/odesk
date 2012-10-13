@@ -53,22 +53,22 @@ function addSkill(obj) {
   if (skill.split('-').length <= 0) { 
     skill = skill.toLowerCase().split(' ').join('-'); 
   }
-  if (container.find('.' + skill).size() < 1) { 
+  if (container.find('.skill[skill="' + skill + '"]').size() < 1) { 
     
     cache.load('./templates/skill-button.html',function(){
       
       /* Going to make a better template function for this */
-      /*cache.html(template({
-        'template-data':cache,
-        'template-items': { 
-          'skill':skillTitle,'skillFormat':skillFormat(skill)
-        }));*/
       cache.html(cache.html().replace(/{{skill}}/gi,skill));
       cache.html(cache.html().replace(/{{skillTitle}}/gi,skillFormat(skill)));
       cache.contents().prependTo(container);
-      $('#skills-section .skill' + '.' + skill).on('click',function(){
-        var skill = $(this).prependTo('#skills-box');
+      $('#skills-section .recommended-skills .skill').on('click',function(){
+        var skill = $(this).prependTo('#skills-box').on('click',function(){
+          $(this).remove();
+        });
         checkSkills();
+      });
+      $('#skills-box .skill').on('click',function(){
+        $(this).remove();
       });
       checkSkills();
       var skillsInput = $('#skills-box input');
@@ -95,64 +95,41 @@ $(function(){
 
 
   function template(data) { }
-  
 
+  function skillsFill(arr) {
 
-  function skillQuickScan(word) {
+    // Remove missing skills
+
+    $('#skills-section .recommended-skills .selection .skill').each(function(){
+      var skill = $(this).attr('skill');
+      if ($.inArray(skill,arr) < 0) { $(this).remove(); checkSkills(); }
+    });
+
+    // Add skills to box
+    
+    for (var i = 0;i<arr.length;i++) {
+      addSkill({'skill':arr[i],'parent':'#skills-section .recommended-skills .selection'});
+    }
+    
+  }
+
+  function skillQuickScan(str) {
     var quickSkill = skills.join(' ');
-    if (quickSkill.indexOf(word) >= 0) { return true }
+    if (quickSkill.indexOf(str) >= 0) { return true }
     return false;
   }
-  function skillScan(word) {
+
+  function skillScan(str) {
     var skillsNum,
         n,
         skillMatch=[];
     for (n = 0;n < skills.length; n++) {
-      if (skills[n].indexOf(word) >= 0) {
+      if (skills[n].indexOf(str) >= 0) {
         skillMatch.push(skills[n]);
         skillsNum++;
       }
     }
     return skillMatch;
-  }
-
-  function jobSkillScan(obj) {
-    var n,
-        skillMatch,
-        array      = obj['array'],
-        index          = obj['index'],
-        skillsNum  = 0,
-        word       = array[index].replace(/[^a-zA-Z 0-9]+/g,'').toLowerCase();
-    
-    if (skillQuickScan(word)) { // Check to see if there's a match
-      var skillMatches = skillScan(word);
-
-      if (skillMatches.length == 1) {
-        var skill = skillMatches[0];
-
-        // Check to see what percentage of the word matches the db
-        var wordPercentage  = word.length / skill.length * 100,
-            minPercentage   = 30; // If the word is 30% similar add the skill
-        
-        if (wordPercentage < minPercentage) { // Check if word before or after improves match
-          wordPercentage = wordSkillCompare({'array':array,'index':index,'skill':skill});
-        }
-        if (wordPercentage >= minPercentage) { addSkill({'skill':skill,'parent':'#skills-section .recommended-skills .selection'}); }
-      
-      }
-    }
-  }
-  
-  function jobWordScan(el) {
-    var content = el.val(),
-        array = content.split(' ');
-
-    for (var i = 0;i < array.length;i++) {
-      if (array[i]) { 
-        jobSkillScan({'array':array,'index':i});
-      }
-    }
-  
   }
 
   function wordSkillCompare(obj) {
@@ -182,34 +159,69 @@ $(function(){
     return percentage;
   }
 
-  function getSkills(el) {
-    /* Temporary */
-    /* 
-    1.  Send the whole chunk of the input,
-        return an array of matching skills
+  function jobSkillScan(obj) {
+    var n,
+        skillMatch,
+        array      = obj['array'],
+        index          = obj['index'],
+        skillsNum  = 0,
+        word       = array[index].replace(/[^a-zA-Z 0-9]+/g,'').toLowerCase();
+    
+    if (skillQuickScan(word)) { // Check to see if there's a match
+      var skillMatches = skillScan(word);
 
+      if (skillMatches.length == 1) {
+        var skill = skillMatches[0];
+
+        // Check to see what percentage of the word matches the db
+        var wordPercentage  = word.length / skill.length * 100,
+            minPercentage   = 30; // If the word is 30% similar add the skill
+        
+        if (wordPercentage < minPercentage) { // Check if word before or after improves match
+          wordPercentage = wordSkillCompare({'array':array,'index':index,'skill':skill});
+        }
+        if (wordPercentage >= minPercentage) { return skill; }
+      
+      }
+    }
+  }
+  
+  function getSkillArray(el) {
+    var content = el.val(),
+        array = content.split(' '),
+        skills = [];
+
+    for (var i = 0;i < array.length;i++) {
+      if (array[i]) { 
+        // Add matching skills to the array
+        var skillMatch = jobSkillScan({'array':array,'index':i});
+        if (skillMatch) { skills.push(skillMatch); }
+      }
+    }
+    if (skills) { return skills; }
+  }
+
+
+  function getSkills(el) {
+
+    // 1.  Return an array of matching skills
     var skills = getSkillArray(el);
     
-    3.  Check skills box for skills that don't exist
-    
-    filterSkillsBox(skills);
-    
-    4.  Add the missing skills to the skills box
-    
+    // 2.  Add the skills to the skills box
     skillsFill(skills)
     
-    */
-    jobWordScan(el);
   }
 
   $('#job-description').on('keyup',function(e){
     
     /* Wait until spacebar is pressed */
-
     if (e.which == 32 || e.which == 13 || e.which == 8) {
       getSkills($(this))
     }
+  });
 
+  $('.row').each(function(){
+    $(this).find('.option:last').addClass('last');
   });
 
 });
