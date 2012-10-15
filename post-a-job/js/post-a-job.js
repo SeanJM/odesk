@@ -13,12 +13,12 @@ function load_template(data,callback) {
 }
 
 function checkSkills() {
-  var recSkills = $('#skills-section').find('.recommended-skills'),
-      recSize   = recSkills.find('.skill').size();
+  var recommendedSkills = $('#skills-section').find('.recommended-skills'),
+      recommendedSize   = recommendedSkills.find('.skill').size();
 
-  if (recSize > 0 && !recSkills.hasClass('visible')) { 
-    var originalHeight = recSkills.height();
-    recSkills
+  if (recommendedSize > 0 && !recommendedSkills.hasClass('visible')) { 
+    var originalHeight = recommendedSkills.height();
+    recommendedSkills
       .addClass('visible')
       .css('opacity',0)
       .css('height',0)
@@ -27,7 +27,7 @@ function checkSkills() {
       })
       .animate({'opacity':1},300); 
   }
-  if (recSize < 1) { recSkills.removeClass('visible'); }
+  if (recommendedSize < 1) { recommendedSkills.removeClass('visible'); }
 }
 
 function skillFormat(str) {
@@ -45,7 +45,7 @@ function skillFormat(str) {
   return newStr.join(' ');
 }
 
-function addSkill(obj) {
+function addSkill(obj,callback) {
   var container   = $(obj['parent']),
       cache       = $('<div/>'),
       skill       = obj['skill'];
@@ -76,6 +76,7 @@ function addSkill(obj) {
     });
   }
   $('#skills-search').removeClass('active');
+  if (callback) { callback(); }
 }
 
 $(function(){
@@ -84,7 +85,7 @@ $(function(){
       var menu = $(this).find('.help-menu'),
           menuPos  = menu.height() / 2,
           icon     = $(this).find('.icon.help'),
-          iconH    = icon.height() + parseInt(icon.css('margin-top')) + parseInt(icon.css('margin-bottom')),
+          iconH    = icon.height() + parseInt(icon.css('margin-top')) + parseInt(icon.css('margin-bottom')) + parseInt(icon.css('top')),
           arrow    = menu.find('.arrow');
       
       menu.css('top',(menuPos - (iconH/2))*-1);
@@ -201,15 +202,11 @@ $(function(){
     if (skills) { return skills; }
   }
 
-
-  function getSkills(el) {
-
+  function getSkills(jobDescription) {
     // 1.  Return an array of matching skills
-    var skills = getSkillArray(el);
-    
+    var skills = getSkillArray(jobDescription);
     // 2.  Add the skills to the skills box
     skillsFill(skills)
-    
   }
 
   $('#job-description').on('keyup',function(e){

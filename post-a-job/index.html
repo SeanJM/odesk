@@ -5,6 +5,7 @@
     <script type="text/javascript" src="js/post-a-job.js"></script>
     <script type="text/javascript" src="js/skills.js"></script>
     <script type="text/javascript" src="js/skills-box.js"></script>
+    <script type="text/javascript" src="js/advanced-options.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>
       Post a Job
@@ -27,11 +28,11 @@
               <div class="dropdown-arrow"></div>
               <div class="dropdown">
                 <div class="arrow ui-element"></div>
-                <a href="#"><span class="label">Provider</span> <span class="account">(Sean J MacIsaac)</span></a>
-                <a href="#"><span class="label">Contractor</span> <span class="account">(Sean MacIsaac)</span></a>
+                <a href="#"><span class="label"><span class="checkbox ui-element checked"></span>Provider</span> <span class="account">(Sean J MacIsaac)</span></a>
+                <a href="#"><span class="label"><span class="checkbox ui-element"></span>Contractor</span> <span class="account">(Sean MacIsaac)</span></a>
                 <hr/>
-                <a href="#"><span class="icon settings"></span>Settings</a>
-                <a href="#"><span class="icon logout"></span>Log out</a>
+                <a id="settings-button" href="#"><span class="icon settings"></span>Settings</a>
+                <a id="logout-button" href="#"><span class="icon logout"></span>Log out</a>
               </div>
             </div>
           </div>
@@ -151,9 +152,9 @@
             </span>
           </label>
           <div id="skills-section">
-            <div id="skills-box"><input type="text"></div>
+            <div id="skills-box"><input type="text" placeholder="Enter skills to perform this job"></div>
             <div class="recommended-skills">
-              <p class="tip">Add our recommended skills to perform this job:</p>
+              <p class="tip">Or, add recommended skills:</p>
               <div class="selection">
                 <div class="arrow"></div>
               </div>
@@ -316,6 +317,111 @@
             <div class="tip">
               <div class="ui-element disclosure"></div>
               <p>Only contractors you invite will be able to view and apply to your job.</p>
+            </div>
+          </div>
+        </div>
+        <div id="advanced-options">
+          <h2><span class="oToggle ui-element"></span>Advanced Options</h2>
+          <div class="row">
+            <label for="file-attach">
+              <span class="not-required">*</span> Attachment
+                <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Attachment</span>
+                    <span class="subtitle"><strong>Public</strong></span>
+                    <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                    <span class="subtitle"><strong>Private</strong></span>
+                    <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div class="option">
+              <div id="file-attach"></div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="date-pick">
+              <span class="not-required">*</span> Est. Start Date
+                <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Estimated Start Date</span>
+                    <span class="subtitle"><strong>Public</strong></span>
+                    <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                    <span class="subtitle"><strong>Private</strong></span>
+                    <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div class="option">
+              <input id="date-pick" type="text" value="Oct 14, 2012">
+            </div>
+          </div>
+          <div class="row">
+            <h3>Perferred Qualifications</h3>
+            <h4>Contractors may still apply if they do not meet your preferences, but they will be clearly notified that they are at a disadvantage.</h4>
+          </div>
+          <div class="row">
+            <label for="date-pick">
+              <span class="not-required">*</span> Group Membership
+                <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Group Membership</span>
+                    <span class="subtitle"><strong>Public</strong></span>
+                    <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                    <span class="subtitle"><strong>Private</strong></span>
+                    <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <select>
+              <option>Select Group</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="feedback-score">
+              <span class="not-required">*</span> Feedback Score
+                <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Feedback Score</span>
+                    <span class="subtitle"><strong>Public</strong></span>
+                    <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                    <span class="subtitle"><strong>Private</strong></span>
+                    <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div id="feedback-score">
+              <div class="star ui-element">
+                <div class="inner-star ui-element"></div>
+              </div>
+              <div class="star ui-element">
+                <div class="inner-star ui-element"></div>
+              </div>
+              <div class="star ui-element">
+                <div class="inner-star ui-element"></div>
+              </div>
+              <div class="star ui-element">
+                <div class="inner-star ui-element"></div>
+              </div>
+              <div class="star ui-element">
+                <div class="inner-star ui-element"></div>
+              </div>
             </div>
           </div>
         </div>
