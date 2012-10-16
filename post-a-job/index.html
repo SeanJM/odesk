@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/skills-box.js"></script>
     <script type="text/javascript" src="js/advanced-options.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/advanced-options.css">
     <title>
       Post a Job
     </title>
@@ -421,6 +422,291 @@
               </div>
               <div class="star ui-element" index="5">
                 <div class="inner-star ui-element"></div>
+              </div>
+            </div>
+            <p>(Min: <span id="feedback-value">0.0</span>)</p>
+          </div>
+          <div class="row">
+            <label for="hour-min">
+              <span class="not-required">*</span> Hourly Rate
+              <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Feedback Score</span>
+                    <span class="subtitle"><strong>Public</strong></span>
+                    <span class="text">Anyone can see the job and apply for it, with the option of it also being visible to search engines like Google, Yahoo and Bing.</span>
+                    <span class="subtitle"><strong>Private</strong></span>
+                    <span class="text">You approach the contractors whom you'd like to invite to apply for your job.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div class="rate-container" id="hour-min">
+              <input type="text" placeholder="Min Rate">
+            </div>
+            <p>To</p>
+            <div class="rate-container" id="hour-max">
+              <input type="text" placeholder="Max Rate">
+            </div>
+            <div id="rate-slider" class="slider-menu">
+              <div class="arrow ui-element"></div>
+              <div class="container">
+                <div class="slider-container">
+                  <div class="sliding-level"></div>
+                  <div class="slider"></div>
+                </div>
+                <p class="min label">$5<span class="cents">.00</span></p>
+                <p class="max label">$500<span class="cents">.00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="location">
+              <span class="not-required">*</span> Location
+            </label>
+            <select>
+              <option>Select Location</option>
+              <option>Australasia</option>
+              <option>East Asia</option>
+              <option>Eastern Europe</option>
+              <option>Latin America</option>
+              <option>North America</option>
+              <option>South Asia</option>
+              <option>Western Europe</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="tests">
+              <span class="not-required">*</span> Tests Passed
+              <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Tests Passed</span>
+                    <span class="text">You can make sure that the person applying to your job has a firm understanding of any software or technology that your project requires.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <select name="tests" class="oFormMed valid" id="tests">
+              <optgroup label="">
+                <option value="0" label="Don't display" selected="selected">Don't display</option>
+              </optgroup>
+              <option value="467" label="3ds Max 7.0 Test">3ds Max 7.0 Test</option>
+              <option value="673" label="3ds Max 9 Test">3ds Max 9 Test</option>
+               <option value="858" label="4delite Skills Test">4delite Skills Test</option>
+               <option value="674" label="Accounting Principles Test">Accounting Principles Test</option>
+               <option value="675" label="Accounting Skills Test (Assets and Revenue)">Accounting Skills Test (Assets and Revenue)</option>
+               <option value="676" label="Accounting Skills Test (Cash Flow)">Accounting Skills Test (Cash Flow)</option>
+               <option value="677" label="Accounting Skills Test (Securities, Derivatives and Investments)">Accounting Skills Test (Securities, Derivatives and Investments)</option>
+               <option value="678" label="Accounts Payable Test">Accounts Payable Test</option>
+               <option value="679" label="Accounts Receivable Test">Accounts Receivable Test</option>
+               <option value="762" label="Action Script 3.0 Test">Action Script 3.0 Test</option>
+               <option value="888" label="Action Script 3.0 Test (Mac Version)">Action Script 3.0 Test (Mac Version)</option>
+               <option value="469" label="Active Directory Test">Active Directory Test</option>
+               <option value="471" label="Adobe After Effects 7.0 Test">Adobe After Effects 7.0 Test</option>
+               <option value="613" label="Adobe Fireworks CS3 Test">Adobe Fireworks CS3 Test</option>
+               <option value="614" label="Adobe Flash CS3 Test">Adobe Flash CS3 Test</option>
+               <option value="782" label="Adobe Flash CS3 Test (Mac Version)">Adobe Flash CS3 Test (Mac Version)</option>
+               <option value="758" label="Adobe Flash CS4 Test">Adobe Flash CS4 Test</option>
+               <option value="861" label="Adobe Flash CS4 Test (Mac Version)">Adobe Flash CS4 Test (Mac Version)</option>
+               <option value="764" label="Adobe Flex 3.0 Test">Adobe Flex 3.0 Test</option>
+               <option value="607" label="Adobe Flex Builder 2 Test">Adobe Flex Builder 2 Test</option>
+               <option value="626" label="Adobe FrameMaker 8 Test">Adobe FrameMaker 8 Test</option>
+               <option value="616" label="Adobe Illustrator CS3 Test">Adobe Illustrator CS3 Test</option>
+               <option value="950" label="Adobe Illustrator CS3 Test (Mac Version)">Adobe Illustrator CS3 Test (Mac Version)</option>
+               <option value="724" label="Adobe Illustrator CS4 Test">Adobe Illustrator CS4 Test</option>
+               <option value="863" label="Adobe Illustrator CS4 Test (Mac Version)">Adobe Illustrator CS4 Test (Mac Version)</option>
+               <option value="883" label="Adobe Illustrator CS5 Extended Test">Adobe Illustrator CS5 Extended Test</option>
+               <option value="472" label="Adobe Illustrator Test">Adobe Illustrator Test</option>
+               <option value="630" label="Adobe InCopy CS3 Test">Adobe InCopy CS3 Test</option>
+               <option value="628" label="Adobe InDesign CS3 Test">Adobe InDesign CS3 Test</option>
+               <option value="956" label="Adobe InDesign CS3 Test (Mac Version)">Adobe InDesign CS3 Test (Mac Version)</option>
+               <option value="761" label="Adobe InDesign CS4 Test">Adobe InDesign CS4 Test</option>
+               <option value="807" label="Adobe Indesign CS4 Test (Mac Version)">Adobe Indesign CS4 Test (Mac Version)</option>
+               <option value="474" label="Adobe Photoshop 6.0">Adobe Photoshop 6.0</option>
+               <option value="965" label="Adobe Photoshop CS2 Test">Adobe Photoshop CS2 Test</option>
+               <option value="615" label="Adobe Photoshop CS3 Test">Adobe Photoshop CS3 Test</option>
+               <option value="933" label="Adobe Photoshop CS3 Test (Mac Version)">Adobe Photoshop CS3 Test (Mac Version)</option>
+               <option value="722" label="Adobe Photoshop CS4 Test">Adobe Photoshop CS4 Test</option>
+               <option value="947" label="Adobe Photoshop CS4 Test (Mac Version)">Adobe Photoshop CS4 Test (Mac Version)</option>
+               <option value="928" label="Adobe Photoshop CS5 Extended Test">Adobe Photoshop CS5 Extended Test</option>
+               <option value="475" label="Adobe Premiere Test">Adobe Premiere Test</option>
+               <option value="470" label="ADO.NET 2003 Test">ADO.NET 2003 Test</option>
+               <option value="476" label="Advanced Java Test">Advanced Java Test</option>
+               <option value="645" label="Advanced PHP Test">Advanced PHP Test</option>
+               <option value="596" label="Advertising Skills Certification">Advertising Skills Certification</option>
+               <option value="478" label="AJAX Test">AJAX Test</option>
+               <option value="720" label="Amazon Web Services (AWS) Test">Amazon Web Services (AWS) Test</option>
+               <option value="961" label="Analytical Skills Test">Analytical Skills Test</option>
+               <option value="680" label="Antispam and Antivirus Test">Antispam and Antivirus Test</option>
+               <option value="749" label="Apache Server Test (2.0 Family)">Apache Server Test (2.0 Family)</option>
+               <option value="481" label="ASP.NET 2003 Test">ASP.NET 2003 Test</option>
+               <option value="901" label="ASP.Net 2.0 using C# Test">ASP.Net 2.0 using C# Test</option>
+               <option value="910" label="ASP.Net 2.0 using VB Test">ASP.Net 2.0 using VB Test</option>
+               <option value="717" label="ASP.Net 3.5 using C# Test">ASP.Net 3.5 using C# Test</option>
+               <option value="716" label="ASP.Net 3.5 using VB Test">ASP.Net 3.5 using VB Test</option>
+               <option value="870" label="ASP.NET Programming Skills Test (Hands-on programming skills)">ASP.NET Programming Skills Test (Hands-on programming skills)</option>
+               <option value="483" label="ASP.NET with SQL Server Test">ASP.NET with SQL Server Test</option>
+               <option value="905" label="Assembla Test">Assembla Test</option>
+               <option value="864" label="Atom Test">Atom Test</option>
+               <option value="627" label="AutoCad 2007 Test">AutoCad 2007 Test</option>
+               <option value="681" label="Book keeping Test">Book keeping Test</option>
+               <option value="754" label="Business Mathematics Test">Business Mathematics Test</option>
+               <option value="682" label="Business Plans Test">Business Plans Test</option>
+               <option value="784" label="Business Strategy Test">Business Strategy Test</option>
+               <option value="683" label="Business Writing Skills Certification">Business Writing Skills Certification</option>
+               <option value="897" label="Business Writing Skills Test (UK Version)">Business Writing Skills Test (UK Version)</option>
+               <option value="934" label="Business Writing Skills Test (U.S. Version)">Business Writing Skills Test (U.S. Version)</option>
+               <option value="484" label="Call Center Skills Test">Call Center Skills Test</option>
+               <option value="787" label="Caspio Test">Caspio Test</option>
+               <option value="944" label="Central Desktop Test">Central Desktop Test</option>
+               <option value="640" label="Checkpoint Security Test">Checkpoint Security Test</option>
+               <option value="851" label="Chrome Product Test">Chrome Product Test</option>
+               <option value="485" label="CISCO Test">CISCO Test</option>
+               <option value="815" label="Civil Engineering Test">Civil Engineering Test</option>
+               <option value="684" label="Cocoa programming for Mac OS X 10.5 Test">Cocoa programming for Mac OS X 10.5 Test</option>
+               <option value="892" label="Codesion Test">Codesion Test</option>
+               <option value="486" label="ColdFusion MX 7">ColdFusion MX 7</option>
+               <option value="781" label="Compiler Design Test">Compiler Design Test</option>
+               <option value="885" label="Computer Aptitude Test">Computer Aptitude Test</option>
+               <option value="890" label="ConceptShare Test">ConceptShare Test</option>
+               <option value="959" label="Constant Contact Skills Test">Constant Contact Skills Test</option>
+               <option value="908" label="Content Writing Skills Test">Content Writing Skills Test</option>
+               <option value="619" label="CorelDraw X3 Test">CorelDraw X3 Test</option>
+               <option value="617" label="Corel Paint Shop Pro XI Test">Corel Paint Shop Pro XI Test</option>
+               <option value="618" label="Corel Ventura 10 Test">Corel Ventura 10 Test</option>
+               <option value="733" label="Corporate Strategy Test">Corporate Strategy Test</option>
+               <option value="865" label="C++ Programming Skills Test (Hands-on programming skills)">C++ Programming Skills Test (Hands-on programming skills)</option>
+               <option value="685" label="Creative Writing Test - Fiction (UK Version)">Creative Writing Test - Fiction (UK Version)</option>
+               <option value="654" label="Creative Writing Test - Fiction (U.S. Version)">Creative Writing Test - Fiction (U.S. Version)</option>
+               <option value="687" label="Creative Writing Test - Non-fiction (UK Version)">Creative Writing Test - Non-fiction (UK Version)</option>
+               <option value="686" label="Creative Writing Test - Non-fiction (U.S. Version)">Creative Writing Test - Non-fiction (U.S. Version)</option>
+               <option value="492" label="CSS 2.0 Test">CSS 2.0 Test</option>
+               <option value="760" label="CSS 3 Test">CSS 3 Test</option>
+               <option value="785" label="Customer Service Test">Customer Service Test</option>
+               <option value="770" label="Data Interpretation Test">Data Interpretation Test</option>
+               <option value="494" label="Data Structures Test">Data Structures Test</option>
+               <option value="771" label="Data Sufficiency Test">Data Sufficiency Test</option>
+               <option value="495" label="Data Warehousing Test">Data Warehousing Test</option>
+               <option value="740" label="Day Trading Test">Day Trading Test</option>
+               <option value="496" label="DB2 Admin Test">DB2 Admin Test</option>
+               <option value="498" label="Delphi 6 Test">Delphi 6 Test</option>
+               <option value="936" label="Design Considerations for Mobile Web Applications Development Test">Design Considerations for Mobile Web Applications Development Test</option>
+               <option value="499" label="Developer 2000 Test">Developer 2000 Test</option>
+               <option value="500" label="DHTML Test">DHTML Test</option>
+               <option value="665" label="Digital Electronics Test">Digital Electronics Test</option>
+               <option value="666" label="Digital Imaging Test">Digital Imaging Test</option>
+               <option value="667" label="Digital Signal Processing Test">Digital Signal Processing Test</option>
+               <option value="967" label="Dimdim Test">Dimdim Test</option>
+               <option value="718" label="DotNet 2.0 using C# Test">DotNet 2.0 using C# Test</option>
+               <option value="719" label="DotNet 2.0 using VB Test">DotNet 2.0 using VB Test</option>
+               <option value="727" label="DotNet 3.5 using C# Test">DotNet 3.5 using C# Test</option>
+               <option value="943" label="DotNet 3.5 using VB Test">DotNet 3.5 using VB Test</option>
+               <option value="502" label="Dot Net Fundamentals Test">Dot Net Fundamentals Test</option>
+               <option value="605" label="Dot Net Nuke Test">Dot Net Nuke Test</option>
+               <option value="587" label="Dreamweaver 8 Test">Dreamweaver 8 Test</option>
+               <option value="794" label="Dreamweaver 8 Test (Mac Version)">Dreamweaver 8 Test (Mac Version)</option>
+               <option value="631" label="Dreamweaver CS3 Test">Dreamweaver CS3 Test</option>
+               <option value="810" label="Dreamweaver CS3 Test (Mac Version)">Dreamweaver CS3 Test (Mac Version)</option>
+               <option value="738" label="Dreamweaver CS4 Test">Dreamweaver CS4 Test</option>
+               <option value="792" label="Dreamweaver CS4 Test (Mac Version)">Dreamweaver CS4 Test (Mac Version)</option>
+               <option value="789" label="Drop.io Skills Test">Drop.io Skills Test</option>
+               <option value="658" label="Drupal 5 Test">Drupal 5 Test</option>
+               <option value="811" label="Drupal 6.14 Test">Drupal 6.14 Test</option>
+               <option value="783" label="E4X Test">E4X Test</option>
+               <option value="734" label="eBay Web Services Test">eBay Web Services Test</option>
+               <option value="504" label="Ecommerce Test">Ecommerce Test</option>
+               <option value="668" label="Electronic Design Test">Electronic Design Test</option>
+               <option value="506" label="Email Etiquette Certification">Email Etiquette Certification</option>
+               <option value="669" label="Embedded Systems Test">Embedded Systems Test</option>
+               <option value="911" label="English Spelling Test (UK Version)">English Spelling Test (UK Version)</option>
+               <option value="688" label="English Spelling Test (U.S. Version)">English Spelling Test (U.S. Version)</option>
+               <option value="832" label="English To Arabic Translation Skills Test">English To Arabic Translation Skills Test</option>
+               <option value="825" label="English To Brazilian Portuguese Translation Skills Test">English To Brazilian Portuguese Translation Skills Test</option>
+               <option value="817" label="English To Danish Translation Skills Test">English To Danish Translation Skills Test</option>
+               <option value="819" label="English To Dutch Translation Skills Test">English To Dutch Translation Skills Test</option> <option value="828" label="English To European Portuguese Translation Skills Test">English To European Portuguese Translation Skills Test</option> <option value="689" label="English To French Translation Skills Test">English To French Translation Skills Test</option> <option value="690" label="English To German Translation Skills Test">English To German Translation Skills Test</option> <option value="691" label="English To Italian Translation Skills Test">English To Italian Translation Skills Test</option> <option value="818" label="English to Japanese Translation Skills Test">English to Japanese Translation Skills Test</option> <option value="833" label="English To Korean Translation Skills Test">English To Korean Translation Skills Test</option> <option value="834" label="English To Mandarin Translation Skills Test">English To Mandarin Translation Skills Test</option> <option value="850" label="English To Russian Translation Skills Test">English To Russian Translation Skills Test</option> <option value="692" label="English To Spanish Translation Skills Test">English To Spanish Translation Skills Test</option> <option value="824" label="English To Swedish Translation Skills Test">English To Swedish Translation Skills Test</option> <option value="823" label="English To Tagalog (Filipino) Translation Skills Test">English To Tagalog (Filipino) Translation Skills Test</option> <option value="869" label="English Vocabulary Test (UK Version)">English Vocabulary Test (UK Version)</option> <option value="693" label="English Vocabulary Test (U.S. Version)">English Vocabulary Test (U.S. Version)</option> <option value="513" label="Enterprise Java Beans (EJB) 2.0 Test">Enterprise Java Beans (EJB) 2.0 Test</option> <option value="590" label="ERP Test">ERP Test</option> <option value="728" label="Event Planning Test">Event Planning Test</option> <option value="779" label="Facebook Connect Test">Facebook Connect Test</option> <option value="608" label="Facebook Development Test">Facebook Development Test</option> <option value="660" label="Facebook Open Platform Development Test">Facebook Open Platform Development Test</option> <option value="637" label="Fiber Optics Test">Fiber Optics Test</option> <option value="856" label="Final Cut Pro 7 Skills Test">Final Cut Pro 7 Skills Test</option> <option value="932" label="Financial Analysis Test">Financial Analysis Test</option> <option value="929" label="Financial Forecasting Test">Financial Forecasting Test</option> <option value="935" label="Financial Reporting Test">Financial Reporting Test</option> <option value="952" label="Financial Statement Test">Financial Statement Test</option> <option value="638" label="Firewall Concepts Test">Firewall Concepts Test</option> <option value="895" label="French Grammar Test">French Grammar Test</option> <option value="808" label="French Proofreading Skills Test">French Proofreading Skills Test</option> <option value="924" label="French Sentence Structure Test">French Sentence Structure Test</option> <option value="798" label="French Spelling Skills Test">French Spelling Skills Test</option> <option value="694" label="French To English Translation Skills Test">French To English Translation Skills Test</option> <option value="805" label="French Vocabulary Skills Test">French Vocabulary Skills Test</option> <option value="814" label="French Word Usage Test">French Word Usage Test</option> <option value="514" label="FrontPage 2000 Test">FrontPage 2000 Test</option> <option value="659" label="Game Programming Concepts Test">Game Programming Concepts Test</option> <option value="902" label="General Financial Accounting Test">General Financial Accounting Test</option> <option value="723" label="Generally Accepted Accounting Principles (GAAP) Test">Generally Accepted Accounting Principles (GAAP) Test</option> <option value="889" label="German Grammar Test">German Grammar Test</option> <option value="904" label="German Proofreading Skills Test">German Proofreading Skills Test</option> <option value="903" label="German Sentence Structure Test">German Sentence Structure Test</option> <option value="795" label="German Spelling Test">German Spelling Test</option> <option value="695" label="German To English Translation Skills Test">German To English Translation Skills Test</option> <option value="797" label="German Vocabulary Skills Test">German Vocabulary Skills Test</option> <option value="884" label="German Word Usage Test">German Word Usage Test</option> <option value="855" label="Gmail Product Test">Gmail Product Test</option> <option value="742" label="Google AdWords Test">Google AdWords Test</option> <option value="649" label="Google Android Programming Test">Google Android Programming Test</option> <option value="827" label="Google App Engine Test">Google App Engine Test</option> <option value="726" label="Grant Writing Test">Grant Writing Test</option> <option value="942" label="Health Club Management Certification">Health Club Management Certification</option> <option value="516" label="Help Desk Certification">Help Desk Certification</option> <option value="836" label="Hospitality Terminology Test">Hospitality Terminology Test</option> <option value="518" label="HTML 4.01 Test">HTML 4.01 Test</option> <option value="926" label="HTML 5 Test">HTML 5 Test</option> <option value="791" label="Integrated Circuits Test">Integrated Circuits Test</option> <option value="767" label="Internet Marketing Test">Internet Marketing Test</option> <option value="641" label="Internet Security Test">Internet Security Test</option> <option value="912" label="Inventory Management Test">Inventory Management Test</option> <option value="661" label="iPhone Programming OS 2.1 Test">iPhone Programming OS 2.1 Test</option> <option value="857" label="iPhone Programming OS 4.0 Test">iPhone Programming OS 4.0 Test</option> <option value="876" label="Italian Grammar Test">Italian Grammar Test</option> <option value="800" label="Italian Proofreading Skills Test">Italian Proofreading Skills Test</option> <option value="954" label="Italian Sentence Structure Test">Italian Sentence Structure Test</option> <option value="799" label="Italian Spelling Skills Test">Italian Spelling Skills Test</option> <option value="696" label="Italian To English Translation Skills Test">Italian To English Translation Skills Test</option> <option value="801" label="Italian Vocabulary Skills Test">Italian Vocabulary Skills Test</option> <option value="813" label="Italian Word Usage Test">Italian Word Usage Test</option> <option value="599" label="J2ME Test">J2ME Test</option> <option value="913" label="JAVA Programming Skills Test (Hands-on programming skills)">JAVA Programming Skills Test (Hands-on programming skills)</option> <option value="520" label="JavaScript 1.3 Test">JavaScript 1.3 Test</option> <option value="777" label="JavaScript 1.8 Test">JavaScript 1.8 Test</option> <option value="519" label="Java Test">Java Test</option> <option value="521" label="JDBC 2.1 Test">JDBC 2.1 Test</option> <option value="634" label="Joomla 1.5 Test">Joomla 1.5 Test</option> <option value="522" label="JSharp 2003 Test">JSharp 2003 Test</option> <option value="793" label="JSON Test">JSON Test</option> <option value="523" label="JSP 2.0 Test">JSP 2.0 Test</option> <option value="873" label="Kaizen Certification">Kaizen Certification</option> <option value="697" label="Kernel Programming Test (Solaris 2.x internals)">Kernel Programming Test (Solaris 2.x internals)</option> <option value="830" label="Knowledge of Box.net Skills Test">Knowledge of Box.net Skills Test</option> <option value="919" label="Knowledge of Camtasia Skills Test">Knowledge of Camtasia Skills Test</option> <option value="922" label="Knowledge of ColdFusion 9 Skills Test">Knowledge of ColdFusion 9 Skills Test</option> <option value="840" label="Knowledge of Corel Draw X5 Test">Knowledge of Corel Draw X5 Test</option> <option value="886" label="Knowledge of Google AdSense Test">Knowledge of Google AdSense Test</option> <option value="748" label="Knowledge of Google Analytics Test">Knowledge of Google Analytics Test</option> <option value="969" label="Knowledge of Google SketchUp Pro 7 Skills Test">Knowledge of Google SketchUp Pro 7 Skills Test</option> <option value="964" label="Knowledge of Google Wave Skills Test">Knowledge of Google Wave Skills Test</option> <option value="756" label="Knowledge of Google Webmaster Central Test">Knowledge of Google Webmaster Central Test</option> <option value="759" label="Knowledge of Google Website Optimizer Test">Knowledge of Google Website Optimizer Test</option> <option value="844" label="Knowledge of Google Web Toolkit Skills Test">Knowledge of Google Web Toolkit Skills Test</option> <option value="747" label="Knowledge of ISO9001 Test">Knowledge of ISO9001 Test</option> <option value="757" label="Knowledge of Joomla 1.5.x Test">Knowledge of Joomla 1.5.x Test</option> <option value="774" label="Knowledge of Joomla Coding Techniques Test">Knowledge of Joomla Coding Techniques Test</option> <option value="837" label="Knowledge of jQuery 1.3.2 Skills Test">Knowledge of jQuery 1.3.2 Skills Test</option> <option value="894" label="Knowledge of Magento Skills Test">Knowledge of Magento Skills Test</option> <option value="939" label="Knowledge of Microsoft Expression Web 4 Skills Test">Knowledge of Microsoft Expression Web 4 Skills Test</option> <option value="820" label="Knowledge of Microsoft Office SharePoint Workspace 2010 Skills Test">Knowledge of Microsoft Office SharePoint Workspace 2010 Skills Test</option> <option value="891" label="Knowledge of Microsoft Office Skills Test">Knowledge of Microsoft Office Skills Test</option> <option value="831" label="Knowledge of Microsoft Silverlight Skills Test">Knowledge of Microsoft Silverlight Skills Test</option> <option value="826" label="Knowledge of Mootools Skills Test">Knowledge of Mootools Skills Test</option> <option value="862" label="Knowledge of .Net Framework 4.0 Skills Test">Knowledge of .Net Framework 4.0 Skills Test</option> <option value="966" label="Knowledge of Ning Skills Test">Knowledge of Ning Skills Test</option> <option value="878" label="Knowledge of Prototype Skills Test">Knowledge of Prototype Skills Test</option> <option value="907" label="Knowledge of Ruby Skills Test">Knowledge of Ruby Skills Test</option> <option value="938" label="Knowledge of SAP ABAP Test">Knowledge of SAP ABAP Test</option> <option value="839" label="Knowledge of Skype Development Test">Knowledge of Skype Development Test</option> <option value="871" label="Knowledge of SQL Server 2008 Skills Test">Knowledge of SQL Server 2008 Skills Test</option> <option value="838" label="Knowledge of Symbian C++ Test">Knowledge of Symbian C++ Test</option> <option value="835" label="Knowledge of Vectorworks 2010 Skills Test">Knowledge of Vectorworks 2010 Skills Test</option> <option value="867" label="Knowledge of VirtueMart Test">Knowledge of VirtueMart Test</option> <option value="900" label="Knowledge of Windows 7 Skills Test">Knowledge of Windows 7 Skills Test</option> <option value="893" label="Knowledge of Windows Mobile Skills Test">Knowledge of Windows Mobile Skills Test</option> <option value="962" label="Knowledge of Windows Phone 7 Skills Test">Knowledge of Windows Phone 7 Skills Test</option> <option value="946" label="Knowledge of Wordpress 3.0 Skills Test">Knowledge of Wordpress 3.0 Skills Test</option> <option value="880" label="Knowledge of WordPress 3.1 Skills Test">Knowledge of WordPress 3.1 Skills Test</option> <option value="802" label="Knowledge of YAML Test">Knowledge of YAML Test</option> <option value="604" label="LAMP Test">LAMP Test</option> <option value="968" label="Lean Management Certification">Lean Management Certification</option> <option value="960" label="Lending Practices and Loans Test">Lending Practices and Loans Test</option> <option value="852" label="LQE Product Test">LQE Product Test</option> <option value="653" label="Mac OS X 10.5 Test">Mac OS X 10.5 Test</option> <option value="620" label="Macromedia Director MX 2004 Test">Macromedia Director MX 2004 Test</option> <option value="588" label="Macromedia Flash 8 Test">Macromedia Flash 8 Test</option> <option value="920" label="Macromedia Flash 8 Test (Mac Version)">Macromedia Flash 8 Test (Mac Version)</option> <option value="624" label="Macromedia FreeHand MX Test">Macromedia FreeHand MX Test</option> <option value="860" label="Magento eCommerce Test">Magento eCommerce Test</option> <option value="594" label="Management Skills Test">Management Skills Test</option> <option value="804" label="Manufacturing Design Test">Manufacturing Design Test</option> <option value="963" label="Marketing Management Test">Marketing Management Test</option> <option value="698" label="Marketing Methods and Techniques Test">Marketing Methods and Techniques Test</option> <option value="595" label="Marketing Terminology Test">Marketing Terminology Test</option> <option value="736" label="Market Research Test">Market Research Test</option> <option value="918" label="Master Trainer Certification">Master Trainer Certification</option> <option value="786" label="Material Engineering Test">Material Engineering Test</option> <option value="526" label="Maya 7.0 Test">Maya 7.0 Test</option> <option value="809" label="Mechanical Engineering Test">Mechanical Engineering Test</option> <option value="780" label="Mechanical IQ Test">Mechanical IQ Test</option> <option value="951" label="Medical Billing Certification">Medical Billing Certification</option> <option value="848" label="Microsoft Access 2010 Test">Microsoft Access 2010 Test</option> <option value="846" label="Microsoft Excel 2010 Test">Microsoft Excel 2010 Test</option> <option value="925" label="Microsoft Office SharePoint Server 2007 Test">Microsoft Office SharePoint Server 2007 Test</option> <option value="623" label="Microsoft OutLook 2007 Test">Microsoft OutLook 2007 Test</option> <option value="849" label="Microsoft Outlook 2010 Test">Microsoft Outlook 2010 Test</option> <option value="847" label="Microsoft PowerPoint 2010 Test">Microsoft PowerPoint 2010 Test</option> <option value="625" label="Microsoft SharePoint Designer 2007 Test">Microsoft SharePoint Designer 2007 Test</option> <option value="629" label="Microsoft Visio 2007 Test">Microsoft Visio 2007 Test</option> <option value="845" label="Microsoft Word 2010 Test">Microsoft Word 2010 Test</option> <option value="822" label="Mobile Web Authoring Test">Mobile Web Authoring Test</option> <option value="527" label="MS Access 2000 Test">MS Access 2000 Test</option> <option value="528" label="MS Access 2003 Test">MS Access 2003 Test</option> <option value="610" label="MS Access 2007 Test">MS Access 2007 Test</option> <option value="529" label="MS Excel 2000 Test">MS Excel 2000 Test</option> <option value="531" label="MS Excel 2003 Test">MS Excel 2003 Test</option> <option value="611" label="MS Excel 2007 Test">MS Excel 2007 Test</option> <option value="532" label="MS PowerPoint 2000 Test">MS PowerPoint 2000 Test</option> <option value="534" label="MS PowerPoint 2003 Test">MS PowerPoint 2003 Test</option> <option value="612" label="MS PowerPoint 2007 Test">MS PowerPoint 2007 Test</option> <option value="535" label="MS SQL Server 2000 Test">MS SQL Server 2000 Test</option> <option value="636" label="MS SQL Server 2005 Test">MS SQL Server 2005 Test</option> <option value="536" label="MS Word 2000 Test">MS Word 2000 Test</option> <option value="538" label="MS Word 2003 Test">MS Word 2003 Test</option> <option value="609" label="MS Word 2007 Test">MS Word 2007 Test</option> <option value="539" label="MySQL 5.0 Test">MySQL 5.0 Test</option> <option value="765" label="Negotiations Skills Test">Negotiations Skills Test</option> <option value="821" label="NetBeans Test">NetBeans Test</option> <option value="540" label="Networking Concepts Test">Networking Concepts Test</option> <option value="541" label="Networking Server 2003 Test">Networking Server 2003 Test</option> <option value="543" label="Networking with Windows NT 4 Test">Networking with Windows NT 4 Test</option> <option value="544" label="Networking XP Test">Networking XP Test</option> <option value="699" label="Objective C Test">Objective C Test</option> <option value="773" label="Object Oriented JavaScript 2003 Test">Object Oriented JavaScript 2003 Test</option> <option value="753" label="oDesk Readiness Test for Agency Contractors">oDesk Readiness Test for Agency Contractors</option> <option value="752" label="oDesk Readiness Test for Independent Contractors and Staffing Managers">oDesk Readiness Test for Independent Contractors and Staffing Managers</option> <option value="545" label="Office Skills Test">Office Skills Test</option> <option value="916" label="Online Article Writing and Blogging Test (UK Version)">Online Article Writing and Blogging Test (UK Version)</option> <option value="656" label="Online Article Writing and Blogging Test (U.S. Version)">Online Article Writing and Blogging Test (U.S. Version)</option> <option value="664" label="ooVoo Client API Test">ooVoo Client API Test</option> <option value="715" label="ooVoo Web API Test">ooVoo Web API Test</option> <option value="650" label="OpenGL Programming Test">OpenGL Programming Test</option> <option value="651" label="OpenSocial Test">OpenSocial Test</option> <option value="957" label="Operation Management Test">Operation Management Test</option> <option value="788" label="Operations Research Test">Operations Research Test</option> <option value="746" label="Options Trading Test">Options Trading Test</option> <option value="550" label="Oracle 10g Database Administration">Oracle 10g Database Administration</option> <option value="547" label="Oracle 10g Test">Oracle 10g Test</option> <option value="549" label="Oracle 9i Administration Test">Oracle 9i Administration Test</option> <option value="551" label="Oracle Forms 9i Test">Oracle Forms 9i Test</option> <option value="552" label="Oracle PL/Sql 10g Test">Oracle PL/Sql 10g Test</option> <option value="553" label="Oracle PL/SQL 9i Test">Oracle PL/SQL 9i Test</option> <option value="554" label="Oracle SQL 9i Test">Oracle SQL 9i Test</option> <option value="593" label="Organizational Behavior Test">Organizational Behavior Test</option> <option value="662" label="osCommerce v2.2 Test">osCommerce v2.2 Test</option> <option value="592" label="Outbound Sales Skills Test">Outbound Sales Skills Test</option> <option value="621" label="PageMaker 7.0 Test">PageMaker 7.0 Test</option> <option value="930" label="Palm Pre Application Development Test">Palm Pre Application Development Test</option> <option value="657" label="Paypal Integration for Mobile Skills Test">Paypal Integration for Mobile Skills Test</option> <option value="859" label="Paypal Integration for Web Skills Test">Paypal Integration for Web Skills Test</option> <option value="881" label="Payroll Management Test">Payroll Management Test</option> <option value="663" label="PBwiki - Pages and Files Test ">PBwiki - Pages and Files Test </option> <option value="648" label="PBwiki Test">PBwiki Test</option> <option value="670" label="PCB Design Test">PCB Design Test</option> <option value="700" label="PC Graphics Test">PC Graphics Test</option> <option value="906" label="Peachtree 7 Test">Peachtree 7 Test</option> <option value="555" label="Perl 5 Test">Perl 5 Test</option> <option value="921" label="Perl Programming Skills Test (Hands-on programming skills)">Perl Programming Skills Test (Hands-on programming skills)</option> <option value="866" label="Photography Certification">Photography Certification</option> <option value="556" label="PHP4 Test">PHP4 Test</option> <option value="557" label="PHP5 Test">PHP5 Test</option> <option value="955" label="PHP Programming Skills Test">PHP Programming Skills Test</option> <option value="644" label="PostgreSql 8.1.3 Test">PostgreSql 8.1.3 Test</option> <option value="601" label="PostgreSQL Test">PostgreSQL Test</option> <option value="558" label="Power Builder Test">Power Builder Test</option> <option value="701" label="Principles of Web Graphics Design Test">Principles of Web Graphics Design Test</option> <option value="945" label="Programming Aptitude Test">Programming Aptitude Test</option> <option value="559" label="Programming with C Test">Programming with C Test</option> <option value="560" label="Programming with C# Test">Programming with C# Test</option> <option value="561" label="Programming with C++ Test">Programming with C++ Test</option> <option value="896" label="ProtoShare Skills Test">ProtoShare Skills Test</option> <option value="941" label="Publishing Fundamentals Test">Publishing Fundamentals Test</option> <option value="600" label="Python 2.x Test">Python 2.x Test</option> <option value="914" label="Python Programming Skills Test (Hands-on programming skills)">Python Programming Skills Test (Hands-on programming skills)</option> <option value="622" label="Quark XPress 7.0 Test">Quark XPress 7.0 Test</option> <option value="766" label="Quark XPress 8.0 Test">Quark XPress 8.0 Test</option> <option value="931" label="Quark XPress 8.0 Test (Mac Version)">Quark XPress 8.0 Test (Mac Version)</option> <option value="702" label="Quick Books Pro 2008 Test">Quick Books Pro 2008 Test</option> <option value="772" label="RDF Test">RDF Test</option> <option value="562" label="Redhat Linux 9.0 Admin Test">Redhat Linux 9.0 Admin Test</option> <option value="563" label="Redhat Linux 9.0 General Test">Redhat Linux 9.0 General Test</option> <option value="775" label="Regular Expressions with PHP Test">Regular Expressions with PHP Test</option> <option value="739" label="Report Writing Test">Report Writing Test</option> <option value="731" label="Resume Writing Skills Test">Resume Writing Skills Test</option> <option value="899" label="Retail Banking Industry and Processes Test">Retail Banking Industry and Processes Test</option> <option value="763" label="RSS 2.0 Test">RSS 2.0 Test</option> <option value="776" label="Ruby on Rails 2.3 Test">Ruby on Rails 2.3 Test</option> <option value="602" label="Ruby on Rails Test">Ruby on Rails Test</option> <option value="898" label="RUBY Programming Skills Test (Hands-on programming skills)">RUBY Programming Skills Test (Hands-on programming skills)</option> <option value="703" label="Russian To English Translation Skills Test">Russian To English Translation Skills Test</option> <option value="744" label="Salesforce Test">Salesforce Test</option> <option value="887" label="SAP Netweaver Skills Test">SAP Netweaver Skills Test</option> <option value="743" label="Sarbanes Oxley Act Test">Sarbanes Oxley Act Test</option> <option value="565" label="Search Engine Optimization Test">Search Engine Optimization Test</option> <option value="882" label="Selling Skills Test">Selling Skills Test</option> <option value="671" label="Semiconductor Electronics Test">Semiconductor Electronics Test</option> <option value="603" label="Six Sigma Black Belt Certification">Six Sigma Black Belt Certification</option> <option value="948" label="Six Sigma Green Belt Certification">Six Sigma Green Belt Certification</option> <option value="853" label="Slideshow Product Test">Slideshow Product Test</option> <option value="598" label="SOAP 1.2 Test">SOAP 1.2 Test</option> <option value="768" label="Social Media Marketing Test">Social Media Marketing Test</option> <option value="566" label="Software Testing Test">Software Testing Test</option> <option value="639" label="Solaris 10 U4 Test">Solaris 10 U4 Test</option> <option value="917" label="Spanish Grammar Test">Spanish Grammar Test</option> <option value="953" label="Spanish Proofreading Skills Test">Spanish Proofreading Skills Test</option> <option value="732" label="Spanish Sentence Structure Test">Spanish Sentence Structure Test</option> <option value="796" label="Spanish Spelling Skills Test">Spanish Spelling Skills Test</option> <option value="704" label="Spanish To English Translation Skills Test">Spanish To English Translation Skills Test</option> <option value="803" label="Spanish Vocabulary Skills Test">Spanish Vocabulary Skills Test</option> <option value="812" label="Spanish Word Usage Test">Spanish Word Usage Test</option> <option value="567" label="SQL Test">SQL Test</option> <option value="923" label="Statistics Test">Statistics Test</option> <option value="741" label="Stock Trading Test">Stock Trading Test</option> <option value="806" label="Structural Analysis Test">Structural Analysis Test</option> <option value="841" label="Symbian Platform Python Test">Symbian Platform Python Test</option> <option value="568" label="System Analysis Test">System Analysis Test</option> <option value="652" label="System Programming Test">System Programming Test</option> <option value="569" label="TCP/IP Test">TCP/IP Test</option> <option value="570" label="Technical Writing Skills Certification">Technical Writing Skills Certification</option> <option value="571" label="Telephone Etiquette Certification">Telephone Etiquette Certification</option> <option value="874" label="Test of Knowledge of General JavaScript Skills">Test of Knowledge of General JavaScript Skills</option> <option value="927" label="Time Management Test">Time Management Test</option> <option value="705" label="Total Quality Management Certification">Total Quality Management Certification</option> <option value="721" label="Twitter Developer Test">Twitter Developer Test</option> <option value="708" label="UK English Basic Skills Test">UK English Basic Skills Test</option> <option value="709" label="UK English Grammar Test (For Writing Professionals)">UK English Grammar Test (For Writing Professionals)</option> <option value="710" label="UK English Oxford Style Editing Skills Test (For Writing Professionals)">UK English Oxford Style Editing Skills Test (For Writing Professionals)</option> <option value="711" label="UK English Proofreading Skills Test (Oxford Guide to Style)">UK English Proofreading Skills Test (Oxford Guide to Style)</option> <option value="712" label="UK English Sentence Structure Test (For Writing Professionals)">UK English Sentence Structure Test (For Writing Professionals)</option> <option value="868" label="Understanding differences in British and American English Test">Understanding differences in British and American English Test</option> <option value="575" label="Unix Shell Script Test">Unix Shell Script Test</option> <option value="574" label="Unix Test">Unix Test</option> <option value="735" label="U.S. Academic Writing Test">U.S. Academic Writing Test</option> <option value="672" label="USB Electronics Test">USB Electronics Test</option> <option value="937" label="U.S. Culture and Etiquette Test">U.S. Culture and Etiquette Test</option> <option value="816" label="U.S. English AP Style Editing Skills Test (For Writing Professionals)">U.S. English AP Style Editing Skills Test (For Writing Professionals)</option> <option value="511" label="U.S. English Basic Skills Test">U.S. English Basic Skills Test</option> <option value="505" label="U.S. English Chicago Style Editing Skills Test (For Writing Professionals)">U.S. English Chicago Style Editing Skills Test (For Writing Professionals)</option> <option value="877" label="U.S. English Proofreading Skills Test (AP Style)">U.S. English Proofreading Skills Test (AP Style)</option> <option value="706" label="U.S. English Proofreading Skills Test (Chicago)">U.S. English Proofreading Skills Test (Chicago)</option> <option value="745" label="U.S. English Punctuation and Mechanics Test">U.S. English Punctuation and Mechanics Test</option> <option value="707" label="U.S. English Sentence Structure Test (For Writing Professionals)">U.S. English Sentence Structure Test (For Writing Professionals)</option> <option value="725" label="U.S. Public Speaking Test">U.S. Public Speaking Test</option> <option value="737" label="U.S. Word Usage Test">U.S. Word Usage Test</option> <option value="576" label="VB.NET 2003 Test">VB.NET 2003 Test</option> <option value="872" label="VB.NET Programming Skills Test (Hands-on programming skills)">VB.NET Programming Skills Test (Hands-on programming skills)</option> <option value="729" label="Venture Capital Test">Venture Capital Test</option> <option value="642" label="Virtual Private Network Test">Virtual Private Network Test</option> <option value="577" label="Visual Basic 6 Test">Visual Basic 6 Test</option> <option value="578" label="Visual Basic Test">Visual Basic Test</option> <option value="579" label="Visual Studio Test">Visual Studio Test</option> <option value="635" label="VLSI Test">VLSI Test</option> <option value="643" label="Voice Over IP Test">Voice Over IP Test</option> <option value="606" label="Web Services Test">Web Services Test</option> <option value="909" label="Wi Fi Test">Wi Fi Test</option> <option value="713" label="Wimax Technology Test">Wimax Technology Test</option> <option value="581" label="Windows Networking Design Infrastructure Test">Windows Networking Design Infrastructure Test</option> <option value="582" label="Windows Networking Infrastructure Test">Windows Networking Infrastructure Test</option> <option value="583" label="Windows NT Test">Windows NT Test</option> <option value="730" label="Windows Server 2008 Test">Windows Server 2008 Test</option> <option value="714" label="Windows Vista Administration Test">Windows Vista Administration Test</option> <option value="584" label="Windows XP Test">Windows XP Test</option> <option value="778" label="WordPress 2.8 Test">WordPress 2.8 Test</option> <option value="655" label="Wordpress Test">Wordpress Test</option> <option value="854" label="World Server Product Test">World Server Product Test</option> <option value="585" label="XHTML 1.0 Test">XHTML 1.0 Test</option> <option value="586" label="XML 1.0 Test">XML 1.0 Test</option> <option value="755" label="XML 1.0 Test (Fifth Edition)">XML 1.0 Test (Fifth Edition)</option> <option value="769" label="XML Schema Test">XML Schema Test</option> <option value="958" label="Yahoo Developer skills - Data APIs Test">Yahoo Developer skills - Data APIs Test</option> <option value="790" label="Yahoo Developer skills - Tools and Libraries Test">Yahoo Developer skills - Tools and Libraries Test</option> <option value="940" label="Yahoo Developer Skills - YAP Test">Yahoo Developer Skills - YAP Test</option> <option value="915" label="Zoho Creator Test">Zoho Creator Test</option> 
+             </select>
+          </div>
+          <div class="row">
+            <label for="portfolio">
+              <span class="not-required">*</span> Portfolio
+              <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Portfolio</span>
+                    <span class="text">You can make sure that the person applying to your job has a firm understanding of any software or technology that your project requires.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div class="option">
+              <div class="checkbox-container">
+                <input type="radio" name="job-type" value="portfolio">
+                <span class="label">Required</span>
+              </div>
+            </div>
+            <div class="option">
+              <div class="checkbox-container">
+                <input type="radio" name="job-type" value="no-portfolio">
+                <span class="label">Not Required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="portfolio">
+              <span class="not-required">*</span> English Level
+              <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">English Level</span>
+                    <span class="text">This is a self assessed qualification.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div id="english-level">
+            <div class="slider-menu">
+              <div class="container">
+                <div class="slider-container">
+                  <div class="sliding-level"></div>
+                  <div class="slider"></div>
+                </div>
+                <p class="min label">0</p>
+                <p class="max label">5</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="portfolio">
+              <span class="not-required">*</span> Hours on oDesk
+              <span id="job-description-help" class="help-container">
+                <span class="icon help"></span>
+                <span class="help-menu">
+                  <span class="arrow ui-element"></span>
+                  <span class="help-text">
+                    <span class="title">Hours on oDesk</span>
+                    <span class="text">You can set the minimum amount of time a contractor has worked on oDesk.</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <div class="slider-menu">
+              <div class="container">
+                <div class="slider-container">
+                  <div class="sliding-level"></div>
+                  <div class="slider"></div>
+                </div>
+                <p class="min label">0</p>
+                <p class="max label">1,000</p>
               </div>
             </div>
           </div>

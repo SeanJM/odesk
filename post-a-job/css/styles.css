@@ -10,7 +10,11 @@ a {
 }
 strong { font-weight: 600; }
 /* General Classes */
-
+input[type="text"] {
+  font-size: 16px;
+  color: #656565;
+  padding: 6px 8px;
+}
 .icon {
   display          : inline-block;
   width            : 20px;
@@ -57,14 +61,14 @@ strong { font-weight: 600; }
 }
 .star,
 .inner-star {
-  width: 30px; 
-  height: 30px;
+  width: 28px; 
+  height: 28px;
 }
 .star {
   background-position: -19px -69px;
 }
 .inner-star {
-  background-position: -19px -98px;
+  background-position: -19px -96px;
 }
 
 /* Is used to make the width of the webpage suitable 
@@ -232,7 +236,7 @@ strong { font-weight: 600; }
     border-radius: 8px 8px 0 0;
     font-size    : 17px;
     line-height  : 34px;
-    color        : #3A72CB;
+    color        : #637899;
     background   : #E7ECF0;
     position: relative;
     top: -2px;
@@ -298,7 +302,7 @@ strong { font-weight: 600; }
   font-size  : 32px;
   font-weight: 700;
   line-height: 99px;
-  color      : #819FB1;
+  color      : #4675A3;
   letter-spacing: -1px;
 }
 
@@ -372,6 +376,7 @@ strong { font-weight: 600; }
     border       : 1px solid #cbcbcb;
     border-radius: 3px;
     background   : #fff;
+    width: 391px;
   }
     #main label .help-container .help-menu .help-text .title {
       display      : block;
@@ -555,7 +560,7 @@ strong { font-weight: 600; }
       color      : #A7A7A7;
     }
     #skills-section .recommended-skills .selection {
-      float        : left;
+      float        : right;
       width        : 431px;
       padding      : 5px;
       border-radius: 2px;
@@ -645,66 +650,7 @@ strong { font-weight: 600; }
     font-size: 15px;
     color    : #656565;
   }
-  #advanced-options {
-    float: left;
-    width: 649px;
-    border: 2px solid #E7E7E7;
-    border-radius: 10px;
-    margin: 12px 0 0 0;
-  }
-    #advanced-options .row {
-      width: 580px;
-      margin: 15px 0 15px 43px;
-    }
-      #advanced-options .row .option {
-        width: 363px;
-      }
-      #advanced-options .row select {
-        width: 363px;
-      }
-        #advanced-options .row .option input{
-          font-size: 16px;
-          color: #656565;
-          padding: 6px 8px;
-        }
-    #advanced-options h2 {
-      font-size: 16px;
-      color: #656565;
-      line-height: 19px;
-      margin: 14px 0 10px 14px;
-    }
-      #advanced-options h2 .oToggle {
-        position: relative;
-        top: 3px;
-        margin: 0 10px 0 0;
-      }
-    #advanced-options h3 {
-      font-size: 16px;
-      color: #656565;
-      line-height: 19px;
-      margin: 10px 0 0 0;
-    }
-    #advanced-options h3+h4 {
-      font-size: 15px;
-      color: #A7A7A7;
-      font-weight: 300;
-      margin: 10px 0 0 0;
-    }
-    /* Feedback Score */
-    #advanced-options #feedback-score {
-      width: 363px;
-      float: right;
-    }
-      #advanced-options #feedback-score .star {
-        float: left;
-        margin: 0 8px 0 0;
-        top: 4px;
-        user-select:none;
-      }
-      #advanced-options #feedback-score .star .inner-star {
-        float: left;
-        width: 0;
-      }
+  
 /* End Label */
 /* Footer */
 #footer {
